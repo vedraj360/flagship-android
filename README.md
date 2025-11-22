@@ -19,10 +19,10 @@ application.
 
 ## ✨ Key Features
 
--   **Remote Configuration** -- Fetch and update feature flags via API\
--   **Offline Resilience** -- Local caching via Jetpack DataStore\
--   **Type Safety** -- Boolean, String, Number, and JSON support\
--   **Safe Fallbacks** -- Strict default handling ensures no crashes\
+-   **Remote Configuration** -- Fetch and update feature flags via API
+-   **Offline Resilience** -- Local caching via Jetpack DataStore
+-   **Type Safety** -- Boolean, String, Number, and JSON support
+-   **Safe Fallbacks** -- Strict default handling ensures no crashes
 -   **Coroutines First** -- Built entirely with Kotlin Coroutines & Flow
 
 ------------------------------------------------------------------------
@@ -30,9 +30,9 @@ application.
 ## 🛠 Tech Stack
 
 -   **Language:** Kotlin\
--   **Networking:** Retrofit 2 + Gson\
--   **Async:** Kotlin Coroutines & Flow\
--   **Local Storage:** AndroidX DataStore\
+-   **Networking:** Retrofit 2 + Gson
+-   **Async:** Kotlin Coroutines & Flow
+-   **Local Storage:** AndroidX DataStore
 -   **Architecture (Demo App):** MVVM
 
 ------------------------------------------------------------------------
@@ -45,7 +45,7 @@ Add the module to your Gradle config:
 
 ``` gradle
 dependencies {
-    implementation project(":flagship")
+    implementation("com.github.vedraj360:flagship-android:1.0.0")
 }
 ```
 
@@ -126,7 +126,7 @@ buildTypes {
 
 ### 3. Network Security
 
-Always use **HTTPS**.\
+Always use **HTTPS**.
 Disable cleartext traffic in production:
 
 ``` xml
@@ -139,9 +139,9 @@ Disable cleartext traffic in production:
 
 ## 📱 Running the Demo
 
-1.  Clone the repository\
-2.  Open in Android Studio\
-3.  Run the `app` module\
+1.  Clone the repository
+2.  Open in Android Studio
+3.  Run the `app` module
 4.  Enter your API Key + Dashboard URL on the login screen
 
 ------------------------------------------------------------------------
