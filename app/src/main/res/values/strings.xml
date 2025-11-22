@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FlagShip</string>
+    <string name="connect_save"><![CDATA[Connect & Save]]></string>
+</resources>
