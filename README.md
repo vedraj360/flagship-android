@@ -44,7 +44,7 @@ Add the module to your Gradle config:
 
 ``` gradle
 dependencies {
-    implementation("com.github.vedraj360:flagship-android:1.0.1")
+    implementation("com.github.vedraj360:flagship-android:1.0.2")
 }
 ```
 

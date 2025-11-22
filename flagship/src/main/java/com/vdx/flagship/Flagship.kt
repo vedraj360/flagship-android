@@ -201,6 +201,26 @@ object Flagship {
         return defaultValue
     }
 
+    fun getBoolean(key: String, defaultValue: Boolean = false): Boolean {
+        val flag = memoryCache[key]
+
+        if (flag != null && flag.enabled) {
+            if (flag.type == FlagType.BOOLEAN) {
+                return flag.value?.toBoolean() == true
+            }
+
+            if (flag.value != null) {
+                return flag.value.toBoolean()
+            }
+        }
+
+        val initDefault = initDefaults[key]
+        if (initDefault is Boolean) return initDefault
+        if (initDefault is String) return initDefault.toBoolean()
+
+        return defaultValue
+    }
+
     fun getNumber(key: String, defaultValue: Int): Int {
         return getNumber(key, defaultValue.toDouble()).toInt()
     }
