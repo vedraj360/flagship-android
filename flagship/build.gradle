@@ -22,11 +22,32 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '11'
+        jvmTarget = '17'
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+publishing {
+    publications {
+        create("release", MavenPublication) {
+            afterEvaluate {
+                from components.release
+            }
+
+            groupId = "com.github.vedraj360"
+            artifactId = "flagship-android"
+            version = "1.0.0"
+        }
     }
 }
 
